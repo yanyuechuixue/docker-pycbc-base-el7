@@ -102,3 +102,5 @@ RUN source ~/pycbc-software/bin/activate ; \
         deactivate
 
 RUN echo 'source ${HOME}/pycbc-software/bin/activate' >> ~/.bash_profile
+RUN echo "root:Docker!" | chpasswd
+RUN echo "Docker!" | passwd --stdin root 
