@@ -1,8 +1,8 @@
 FROM ligo/lalsuite-dev:el7
 
 USER root
-RUN echo "root:Docker!" | chpasswd
-RUN echo "Docker!" | passwd --stdin root 
+#RUN echo "root:Docker!" | chpasswd
+#RUN echo "Docker!" | passwd --stdin root 
 # set up additional repositories
 RUN yum -y install curl
 RUN curl -L http://download.pegasus.isi.edu/wms/download/rhel/7/pegasus.repo > /etc/yum.repos.d/pegasus.repo
